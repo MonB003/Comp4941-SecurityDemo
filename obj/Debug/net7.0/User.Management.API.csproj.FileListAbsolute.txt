@@ -81,3 +81,5 @@ C:\Users\m\source\repos\User.Management.API\obj\Debug\net7.0\refint\User.Managem
 C:\Users\m\source\repos\User.Management.API\obj\Debug\net7.0\User.Management.API.pdb
 C:\Users\m\source\repos\User.Management.API\obj\Debug\net7.0\User.Management.API.genruntimeconfig.cache
 C:\Users\m\source\repos\User.Management.API\obj\Debug\net7.0\ref\User.Management.API.dll
+C:\Users\m\source\repos\User.Management.API\bin\Debug\net7.0\User.Management.Service\obj\project.assets.json
+C:\Users\m\source\repos\User.Management.API\bin\Debug\net7.0\User.Management.Service\obj\User.Management.Service.csproj.nuget.dgspec.json

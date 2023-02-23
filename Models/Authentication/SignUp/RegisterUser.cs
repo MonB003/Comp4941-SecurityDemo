@@ -2,6 +2,7 @@
 
 namespace User.Management.API.Models.Authentication.SignUp
 {
+    // Represents a user in the database
     public class RegisterUser
     {
         [Required(ErrorMessage = "Username is required")]

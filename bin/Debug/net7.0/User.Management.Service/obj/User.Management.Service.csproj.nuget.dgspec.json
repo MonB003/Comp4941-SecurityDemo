@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\m\\source\\repos\\User.Management.API\\User.Management.API.csproj": {}
+    "C:\\Users\\m\\source\\repos\\User.Management.API\\User.Management.Service\\User.Management.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\m\\source\\repos\\User.Management.API\\User.Management.API.csproj": {
+    "C:\\Users\\m\\source\\repos\\User.Management.API\\User.Management.Service\\User.Management.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\m\\source\\repos\\User.Management.API\\User.Management.API.csproj",
-        "projectName": "User.Management.API",
-        "projectPath": "C:\\Users\\m\\source\\repos\\User.Management.API\\User.Management.API.csproj",
+        "projectUniqueName": "C:\\Users\\m\\source\\repos\\User.Management.API\\User.Management.Service\\User.Management.Service.csproj",
+        "projectName": "User.Management.Service",
+        "projectPath": "C:\\Users\\m\\source\\repos\\User.Management.API\\User.Management.Service\\User.Management.Service.csproj",
         "packagesPath": "C:\\Users\\m\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\m\\source\\repos\\User.Management.API\\obj\\",
+        "outputPath": "C:\\Users\\m\\source\\repos\\User.Management.API\\User.Management.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -42,34 +42,12 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "NETCore.MailKit": {
               "target": "Package",
-              "version": "[7.0.3, )"
-            },
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.3, )"
-            },
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[7.0.3, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[7.0.3, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.3, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[2.1.0, )"
             }
           },
           "imports": [
@@ -84,9 +62,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

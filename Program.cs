@@ -10,7 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // For Entity framework
 var configuration = builder.Configuration;
+// Connect to SQL server database
 builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(configuration.GetConnectionString("ConnStr")));
+// Identity framework is used to implement forms authentication. This is used to add identities for users and roles
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDBContext>()
     .AddDefaultTokenProviders();
