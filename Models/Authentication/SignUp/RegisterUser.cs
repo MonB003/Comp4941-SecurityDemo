@@ -5,7 +5,9 @@ namespace User.Management.API.Models.Authentication.SignUp
     // Represents a user in the database
     public class RegisterUser
     {
-        [Required(ErrorMessage = "Username is required")]
+		// RegisterUser has 3 fields: UserName, Email, and Password
+
+		[Required(ErrorMessage = "Username is required")]
         public string? UserName { get; set; }
 
         [EmailAddress]

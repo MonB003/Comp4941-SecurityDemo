@@ -5,12 +5,13 @@ using User.Management.API.Models.Authentication.SignUp;
 
 namespace User.Management.API.Controllers
 {
+    // Controller contains app logic for registering a user
     [Route("api/[controller]")]
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
-        private readonly UserManager<IdentityUser> _userManager; // Manages users
-        private readonly RoleManager<IdentityRole> _roleManager; // Manages roles
+        private readonly UserManager<IdentityUser> _userManager; // Manages users in database
+        private readonly RoleManager<IdentityRole> _roleManager; // Manages roles in database
 		private readonly IConfiguration _configuration;
 
         // Constructor to initialize all instance variables
@@ -31,7 +32,8 @@ namespace User.Management.API.Controllers
 			var userExists = await _userManager.FindByEmailAsync(registerUser.Email);
             if (userExists != null)     // There is already a user is the database with this email
             {
-                return StatusCode(StatusCodes.Status403Forbidden,
+				// Return error message
+				return StatusCode(StatusCodes.Status403Forbidden,
                     new Response { Status = "Error", Message = "User already exists." });
             }
 
@@ -39,7 +41,7 @@ namespace User.Management.API.Controllers
 			IdentityUser user = new()
             {
                 Email = registerUser.Email,
-                SecurityStamp = Guid.NewGuid().ToString(),
+                SecurityStamp = Guid.NewGuid().ToString(),  // Guid creates a unique stamp
                 UserName = registerUser.UserName
             };
 
@@ -52,13 +54,15 @@ namespace User.Management.API.Controllers
                 // Check if an error occurred
                 if (!result.Succeeded)
                 {
+                    // Return error message
                     return StatusCode(StatusCodes.Status500InternalServerError,
                         new Response { Status = "Error", Message = "User failed to create." });
                 }
 
                 // Add user to the role
                 await _userManager.AddToRoleAsync(user, role);
-                return StatusCode(StatusCodes.Status200OK,
+				// Return success message
+				return StatusCode(StatusCodes.Status200OK,
                     new Response { Status = "Success", Message = "User created successfully." });
             }
             else
